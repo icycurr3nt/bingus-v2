@@ -4,13 +4,15 @@ import { BrowserRouter, Routes, Route }  from "react-router-dom";
 import './index.css';
 import App from './App.jsx';
 import About from './About.jsx'
-import Portfolio from './Portfolio';
+import Portfolio from './Portfolio.jsx';
+import Home from './Home'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
+        <Route index element={<Home/>} />
         <Route path="about" element={<About/>} />
         <Route path="portfolio" element={<Portfolio/>} />
         <Route path="pokedex" element={<App/>} />
