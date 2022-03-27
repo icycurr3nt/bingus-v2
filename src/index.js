@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route}  from "react-router-dom";
 import './index.css';
 import App from './App.jsx';
 import About from './About.jsx'
+import Portfolio from './Portfolio';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +12,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="about" element={<About/>} />
-        <Route path="portfolio" element={<App/>} />
+        <Route path="portfolio" element={<Portfolio/>} />
         <Route path="pokedex" element={<App/>} />
       </Route>
     </Routes>

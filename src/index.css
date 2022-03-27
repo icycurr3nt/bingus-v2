@@ -7,7 +7,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
-  code {
+code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
-  }
+}
+
+a.external {
+    background: url(/assets/images/github-icon.svg) center left no-repeat;
+    padding-left: 24px;
+}
