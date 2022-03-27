@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Clock from './Clock.jsx'
 
 export default function Header() {
@@ -6,16 +7,16 @@ export default function Header() {
         <div class="bg-dark text-light">
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">Home</a>
+                    <Link class="navbar-brand" to="/">Home</Link>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <Link to="/about" class="nav-link">About</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./portfolio.html">Portfolio</a>
+                            <Link to="/portfolio" class="nav-link">Portfolio</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pokedex.html">Pokedex</a>
+                            <Link to="/pokedex" class="nav-link">Pokédex</Link>
                         </li>
                     </ul>
                     <Clock/>
