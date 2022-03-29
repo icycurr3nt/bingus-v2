@@ -1,6 +1,6 @@
 import React from "react";
 import Papa from "papaparse";
-import pokemon from "./assets/files/pokemon.csv"
+import pokemon from "../assets/files/pokemon.csv"
 import { Link } from "react-router-dom"
 
 class PokemonRow extends React.Component {

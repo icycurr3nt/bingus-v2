@@ -6,8 +6,8 @@ import App from './App.jsx';
 import About from './static_pages/About.jsx'
 import Portfolio from './static_pages/Portfolio.jsx';
 import Home from './static_pages/Home.jsx'
-import Pokedex from './Pokedex.jsx'
-import Pokemon from './Pokemon.jsx'
+import Pokedex from './pages/Pokedex.jsx'
+import Pokemon from './pages/Pokemon.jsx'
 
 ReactDOM.render(
   <React.StrictMode>
