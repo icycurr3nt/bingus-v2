@@ -1,4 +1,8 @@
 import React from "react";
+import './portfolio.css'
+import title from './assets/images/title.png'
+import choice from './assets/images/choice.png'
+
 
 export default function Portfolio() {
     return (<div class="container">
@@ -9,9 +13,9 @@ export default function Portfolio() {
             <div class="container">
 
                 <h1 style={{"text-align": "center"}}>Unnamed Dating Sim</h1>
-                <img src="assets/images/title.png" alt="The Title Scene of Unamed Dating Sim" class="img-fluid rounded mx-auto d-block img-thumbnail"/>
+                <img src={title} alt="The Title Scene of Unamed Dating Sim" class="img-fluid rounded mx-auto d-block img-thumbnail"/>
                 <hr/>
-                <img src="assets/images/choice.png" alt="Screen Capture of Gameplay" class="img-fluid rounded mx-auto d-block mb-5 img-thumbnail"/>
+                <img src={choice} alt="Screen Capture of Gameplay" class="img-fluid rounded mx-auto d-block mb-5 img-thumbnail"/>
                 <hr/>
                 <div class="container">
                     <p class="mt-3">
