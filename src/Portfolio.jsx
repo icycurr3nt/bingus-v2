@@ -1,5 +1,5 @@
 import React from "react";
-import './portfolio.css'
+import './assets/css/portfolio.css'
 import title from './assets/images/title.png'
 import choice from './assets/images/choice.png'
 
