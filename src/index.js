@@ -5,7 +5,9 @@ import './assets/css/index.css';
 import App from './App.jsx';
 import About from './About.jsx'
 import Portfolio from './Portfolio.jsx';
-import Home from './Home'
+import Home from './Home.jsx'
+import Pokedex from './Pokedex.jsx'
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +17,7 @@ ReactDOM.render(
         <Route index element={<Home/>} />
         <Route path="about" element={<About/>} />
         <Route path="portfolio" element={<Portfolio/>} />
-        <Route path="pokedex" element={<App/>} />
+        <Route path="pokedex" element={<Pokedex/>} />
       </Route>
     </Routes>
     </BrowserRouter>
