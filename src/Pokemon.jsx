@@ -1,14 +1,18 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+import { Pokedex } from "pokeapi-js-wrapper"
 
-const P = new Pokedex.Pokedex()
 
-const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
-  });
-  // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-  let id = params.id;
+const P = new Pokedex();
 
 
 
-P.getPokemonByName(id)
+P.getPokemonByName("1")
   .then(function(response) {
   })
+
+export default function Pokemon() {
+  return (
+    <p>{useParams().pokemonId}</p>
+  )
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Papa from "papaparse";
 import pokemon from "./assets/files/pokemon.csv"
+import { Link } from "react-router-dom"
 
 class PokemonRow extends React.Component {
     render() {
@@ -8,7 +9,7 @@ class PokemonRow extends React.Component {
         return (
         <tr>
             <td>{pokemon['NUMBER']}</td>
-            <td><a href={"./pokemon.html?id=" + pokemon['NUMBER']}>{pokemon['NAME']}</a></td>
+            <td><Link to={"/pokemon/" + pokemon['NUMBER']}>{pokemon['NAME']}</Link></td>
             <td>{pokemon['TYPE1']}</td>
             <td>{pokemon['TYPE2']}</td>
             <td>{pokemon['COLOR']}</td>
@@ -34,7 +35,9 @@ export default class PokemonTable extends React.Component {
     
 
     componentDidMount() {
-        fetch(pokemon).then(response => response.text()) .then(csvString => {
+        fetch(pokemon)
+        .then(response => response.text())
+        .then(csvString => {
             this.setState({pokemon: Papa.parse(csvString, {"header": true}).data});
         });
     }
