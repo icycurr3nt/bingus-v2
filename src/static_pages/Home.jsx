@@ -1,8 +1,8 @@
 import React from "react";
-import alan from './assets/images/alan.jpg';
-import titus from './assets/images/titus.png';
-import danica from './assets/images/danica.jpg';
-import nicholas from './assets/images/nicholas.jpg';
+import alan from '../assets/images/alan.jpg';
+import titus from '../assets/images/titus.png';
+import danica from '../assets/images/danica.jpg';
+import nicholas from '../assets/images/nicholas.jpg';
 
 
 export default function Home() {

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route }  from "react-router-dom";
 import './assets/css/index.css';
 import App from './App.jsx';
-import About from './About.jsx'
-import Portfolio from './Portfolio.jsx';
-import Home from './Home.jsx'
+import About from './static_pages/About.jsx'
+import Portfolio from './static_pages/Portfolio.jsx';
+import Home from './static_pages/Home.jsx'
 import Pokedex from './Pokedex.jsx'
 import Pokemon from './Pokemon.jsx'
 

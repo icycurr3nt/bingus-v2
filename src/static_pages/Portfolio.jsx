@@ -1,7 +1,7 @@
 import React from "react";
-import './assets/css/portfolio.css'
-import title from './assets/images/title.png'
-import choice from './assets/images/choice.png'
+import '../assets/css/portfolio.css'
+import title from '../assets/images/title.png'
+import choice from '../assets/images/choice.png'
 
 
 export default function Portfolio() {

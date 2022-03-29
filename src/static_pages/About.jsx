@@ -1,12 +1,12 @@
 import React from "react";
-import alan from './assets/images/alan.jpg';
-import titus from './assets/images/titus.png';
-import danica from './assets/images/danica.jpg';
-import nicholas from './assets/images/nicholas.jpg';
-import animalA from './assets/images/animalA.jpg';
-import animalN from './assets/images/animalN.jpg';
-import komodo from './assets/images/komodo.png';
-import penguin from './assets/images/penguin.jpeg';
+import alan from '../assets/images/alan.jpg';
+import titus from '../assets/images/titus.png';
+import danica from '../assets/images/danica.jpg';
+import nicholas from '../assets/images/nicholas.jpg';
+import animalA from '../assets/images/animalA.jpg';
+import animalN from '../assets/images/animalN.jpg';
+import komodo from '../assets/images/komodo.png';
+import penguin from '../assets/images/penguin.jpeg';
 
 
 export default function About() {
