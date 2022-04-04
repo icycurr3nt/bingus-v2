@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route }  from "react-router-dom";
 import './assets/css/index.css';
 import App from './App.jsx';
 import About from './static_pages/About.jsx'
-import Portfolio from './static_pages/Portfolio.jsx';
+import Portfolio from './static_pages/Portfolio.jsx'
 import Home from './static_pages/Home.jsx'
 import Pokedex from './pages/Pokedex.jsx'
 import Pokemon from './pages/Pokemon.jsx'
+import GroceryList from './pages/GroceryList.jsx'
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,6 +29,7 @@ ReactDOM.render(
         </main>
       }
     />
+        <Route path="grocerylist" element={<GroceryList/>} />
       </Route>
     </Routes>
     </BrowserRouter>

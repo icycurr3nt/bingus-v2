@@ -51,6 +51,9 @@ function Header() {
                       <li class="nav-item">
                           <Link to="/pokedex" class="nav-link">Pokédex</Link>
                       </li>
+                      <li class="nav-item">
+                          <Link to="/grocerylist" class="nav-link">GroceryList</Link>
+                      </li>
                   </ul>
                   <Clock/>
               </div>
