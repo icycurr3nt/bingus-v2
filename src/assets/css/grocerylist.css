@@ -17,14 +17,14 @@ h1 {
     text-align: center;
 }
 
-#charactersList {
+#groceryList {
     padding-inline-start: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
 }
 
-.character {
+.groceryItem {
     list-style-type: none;
     background-color: #eaeaea;
     border-radius: 3px;
@@ -37,18 +37,18 @@ h1 {
     text-align: left;
 }
 
-.character > h2 {
+.groceryItem > h2 {
     grid-area: name;
     margin-bottom: 0px;
 }
 
-.character > p {
+.groceryItem > p {
     grid-area: house;
     margin: 0;
     margin-top: -18px;
 }
 
-.character > img {
+.groceryItem > img {
     max-height: 100px;
     grid-area: image;
 }
