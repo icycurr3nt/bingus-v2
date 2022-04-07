@@ -46,7 +46,7 @@ export default function GroceryList () {
     return (
             <div class="container">
                 <h1>&#x2728;Grocery List &#x2728;</h1>
-                <SearchBar/>
+                <SearchBar/> 
                 <GroceryItems groceryItems={groceryItemsJSON}/>
             </div>
         )  
