@@ -18,8 +18,8 @@ function GroceryItems(props) {
     const rows = [];
         
     props.groceryItems.forEach((grocery) => {
-        console.log(props.searchText)
-        if (grocery.name.includes(props.searchText)) {
+        const matchText = new RegExp(props.searchText, 'g')
+        if (matchText.test(grocery.name.toLowerCase())) {
             
         rows.push(
             <GroceryItem name={grocery.name} price={grocery.price} image={grocery.image}
