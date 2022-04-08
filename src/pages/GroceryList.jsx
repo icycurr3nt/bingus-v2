@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import groceryItemsJSON from "../assets/files/GroceryItems.json";
 import "../assets/css/grocerylist.css";
 
@@ -18,7 +18,7 @@ function GroceryItems(props) {
     const rows = [];
         
     props.groceryItems.forEach((grocery) => {
-        const matchText = new RegExp(props.searchText, 'g')
+        const matchText = new RegExp(props.searchText.toLowerCase(), 'g')
         if (matchText.test(grocery.name.toLowerCase())) {
             
         rows.push(
@@ -33,54 +33,40 @@ function GroceryItems(props) {
     return <ul id="groceryList">{rows}</ul>
 }
 
-class SearchBar extends React.Component {
-    constructor (props) {
-        super(props)
-        this.handleFilterTextChange = this.handleFilterTextChange.bind(this)
-    }
+
+function SearchBar (props) {
+
+
+
+    return (
+    <div id="searchWrapper">
+    <input
+        type="text"
+        name="searchBar"
+        id="searchBar"
+        value={props.value}
+        onChange={props.onChange}
+        placeholder="search for an item"
+    />  
+</div>
+    )
     
-    handleFilterTextChange(e) {
-        this.props.onChange(e.target.value)
-    }
-
-
-    render () {
-        return (
-        <div id="searchWrapper">
-        <input
-            type="text"
-            name="searchBar"
-            id="searchBar"
-            value={this.props.value}
-            onChange={this.handleFilterTextChange}
-            placeholder="search for an item"
-        />  
-    </div>
-        )
-    }
 }
 
 
-export default class GroceryList extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {searchText: ''};
-        this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
-        
+export default function GroceryList (props) {
+    const [searchText, setSearchText] = useState("");
+
+    const onChange = (e) =>  {
+        setSearchText(e.target.value)
     }
 
-    handleSearchBarChange (filterText) {
-        this.setState({searchText: filterText})
-    }
-
-    render () {
-        return (
-                <div class="container">
-                    <h1>&#x2728;Grocery List &#x2728;</h1>
-                    <SearchBar onChange={this.handleSearchBarChange} value={this.state.searchText}/>
-                    <GroceryItems groceryItems={groceryItemsJSON} searchText={this.state.searchText}/>
-                </div>
-            )  
-    }
+    return (
+            <div class="container">
+                <h1>&#x2728;Grocery List &#x2728;</h1>
+                <SearchBar onChange={onChange} value={searchText}/>
+                <GroceryItems groceryItems={groceryItemsJSON} searchText={searchText}/>
+            </div>
+        ) 
 }
 
