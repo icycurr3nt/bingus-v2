@@ -13,7 +13,7 @@ h1 {
 .container {
     padding: 40px;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1500px;
     text-align: center;
 }
 
@@ -33,7 +33,10 @@ h1 {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
         'name image'
-        'house image';
+        'house image'
+        'apartment image'
+        'quantity .'
+        'button button';
     text-align: left;
 }
 
@@ -43,15 +46,18 @@ h1 {
     font-size: larger;
 }
 
-.groceryItem > p {
-    grid-area: house;
-    margin: 0;
-    margin-top: -18px;
-}
-
 .groceryItem > img {
     max-height: 100px;
     grid-area: image;
+}
+
+.groceryItem > #test > p {
+    margin: 0px;
+}
+
+.groceryItem > #test {
+    position: relative;
+    top: 5px;
 }
 
 #searchBar {

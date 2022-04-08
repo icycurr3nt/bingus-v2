@@ -6,12 +6,25 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 function GroceryItem(props) {
+    const [cartQuantity, setCartQuantity] = useState(0);
+
     return (
     <li class="groceryItem">
          <h2>{props.name}</h2>
-         <p>Price: ${props.price} Category: {props.category}</p>
          <img src={props.image} alt={props.name}></img>
-         <button style={{"width": "50%"}} onClick={props.onClick}>{props.btnText}</button>
+         <div id="test">
+            <p style={{"gridArea": "house"}}>Price: ${props.price}</p>
+            <p style={{"gridArea": "apartment"}}>Category: {props.category}</p>
+            
+            <p style={{"gridArea": "quantity"}}>
+                Quantity: {props.showCart ? cartQuantity : props.quantity}
+                </p>
+        </div>
+         <div style={{"gridArea":"button", "marginTop":"5px"}}>
+             <button style={{"width": "50%"}} onClick={props.onClick}>{props.btnText}</button>
+            <button style={{"width": "10%"}} >+</button>
+                <button style={{"width": "10%"}} >-</button>
+         </div>
     </li>
     )
 }
@@ -20,7 +33,7 @@ function GroceryItem(props) {
 function GroceryItems(props) {
     const rows = [];
     const [cartItems, setCartItems] = useState(new Set());
-
+    
     
 
     props.groceryItems.forEach((grocery) => {
@@ -33,11 +46,12 @@ function GroceryItems(props) {
                     cloned_cart.delete(grocery.name)
                     setCartItems(cloned_cart)
                 }
-
+                
+                
                 rows.push(
                     <GroceryItem name={grocery.name} price={grocery.price} image={grocery.image}
                         category={grocery.category} key={grocery.name} onClick={onClickGrocery}
-                        btnText="Remove"
+                        btnText="Remove" showCart={true}
                     />);
                 }
             else if (props.showCart !== true) {
@@ -49,7 +63,7 @@ function GroceryItems(props) {
                 rows.push(
                     <GroceryItem name={grocery.name} price={grocery.price} image={grocery.image}
                         category={grocery.category} key={grocery.name} onClick={onClickGrocery}
-                        btnText="Add to Cart"
+                        btnText="Add to Cart" quantity={grocery.quantity} showCart={false}
                     />);
             }
         }
@@ -60,7 +74,6 @@ function GroceryItems(props) {
             <button input="button" onClick={props.toggleShowCart} style={{"position": "absolute",
                         "top": "100px",
                         "right": "100px"}}>
-                            {cartItems.size} 
                 <FontAwesomeIcon icon={faShoppingCart} />
             </button>
             <ul id="groceryList">{rows}</ul>
