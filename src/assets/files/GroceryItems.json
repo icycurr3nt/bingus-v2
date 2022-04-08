@@ -13,5 +13,5 @@
   {"name":"A Bulb of Garlic", "price":0.50, "category":"Vegetable", "quantity":0, "image":"https://i5.walmartimages.com/asr/9ef999d2-a1d2-4ab7-bde3-70995f9aa155_1.3979fa6701d2b8528eb2d8e9aa6ead68.jpeg"},
   {"name":"Lemon", "price":0.50, "category":"Fruit", "quantity":0, "image":"https://i.ndtvimg.com/mt/cooks/2014-11/lemon.jpg"},
   {"name":"Carrot", "price":0.30, "category":"Vegetable", "quantity":0, "image":"https://cdn.shopify.com/s/files/1/0149/1861/5104/products/Carrot-Orange_480x480@2x.jpg?v=1575563926"},
-  {"name":"Peanuts","price":2.00, "categor":"Nut", "quantity":0, "image":"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSkb_W7ZOyXA2YiBwY3JjnKao7DpAselOAKnfEuTF_prTFXYUKIgesxsk0h8AevfRSDIjNdlmUiwdFML27p8jnFY6IoXhQIY37s-ulX-lu_tsc0bu9YtyGPKA&usqp=CAE"}
+  {"name":"Peanuts","price":2.00, "category":"Nut", "quantity":0, "image":"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSkb_W7ZOyXA2YiBwY3JjnKao7DpAselOAKnfEuTF_prTFXYUKIgesxsk0h8AevfRSDIjNdlmUiwdFML27p8jnFY6IoXhQIY37s-ulX-lu_tsc0bu9YtyGPKA&usqp=CAE"}
 ]
