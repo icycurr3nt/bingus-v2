@@ -40,6 +40,7 @@ h1 {
 .groceryItem > h2 {
     grid-area: name;
     margin-bottom: 0px;
+    font-size: larger;
 }
 
 .groceryItem > p {
@@ -54,12 +55,13 @@ h1 {
 }
 
 #searchBar {
-    width: 100%;
+    width: 90%;
     height: 32px;
     border-radius: 3px;
     border: 1px solid #eaeaea;
     padding: 5px 10px;
     font-size: 12px;
+    margin-bottom: 10px;
 }
 
 #searchWrapper {
