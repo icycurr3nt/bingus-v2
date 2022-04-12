@@ -6,7 +6,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 function GroceryItem(props) {
-    const [cartQuantity, setCartQuantity] = useState(0);
+    const [cartQuantity, setCartQuantity] = useState(1);
 
     return (
     <li class="groceryItem">
@@ -22,8 +22,20 @@ function GroceryItem(props) {
         </div>
          <div style={{"gridArea":"button", "marginTop":"5px"}}>
              <button style={{"width": "50%"}} onClick={props.onClick}>{props.btnText}</button>
-            <button style={{"width": "10%"}} >+</button>
-                <button style={{"width": "10%"}} >-</button>
+
+             {props.showCart == true &&
+             <><button style={{ "width": "10%" }} onClick={() => { setCartQuantity(cartQuantity + 1); } }>+</button>
+             <button style={{ "width": "10%" }} onClick={() => {
+                        if (cartQuantity == 1 || cartQuantity == props.quantity) {
+                            return;
+                        } else {
+                            setCartQuantity(cartQuantity - 1);
+                        }
+
+                    } }>-</button>
+                    </>
+                }
+            
          </div>
     </li>
     )
