@@ -7,6 +7,9 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function GroceryItem(props) {
     const [cartQuantity, setCartQuantity] = useState(1);
+    let btnColor;
+    if (cartQuantity >= props.quantity) {btnColor = "red"
+    } else {btnColor = "black"}
 
     return (
     <li class="groceryItem">
@@ -16,7 +19,7 @@ function GroceryItem(props) {
             <p style={{"gridArea": "house"}}>Price: ${props.price}</p>
             <p style={{"gridArea": "apartment"}}>Category: {props.category}</p>
             
-            <p style={{"gridArea": "quantity"}}>
+            <p style={{"gridArea": "quantity", "color": btnColor}}>
                 Quantity: {props.showCart ? cartQuantity : props.quantity}
                 </p>
         </div>
@@ -24,15 +27,23 @@ function GroceryItem(props) {
              <button style={{"width": "50%"}} onClick={props.onClick}>{props.btnText}</button>
 
              {props.showCart == true &&
-             <><button style={{ "width": "10%" }} onClick={() => { setCartQuantity(cartQuantity + 1); } }>+</button>
+             <><button style={{ "width": "10%"}} onClick={() => { 
+                 console.log(cartQuantity);
+                 console.log(props.quantity)
+                 if (cartQuantity >= props.quantity) {
+                     return
+                 } else {
+                    setCartQuantity(cartQuantity + 1); 
+                 }
+                 } } disabled={cartQuantity == props.quantity ? true : false}>+</button>
              <button style={{ "width": "10%" }} onClick={() => {
-                        if (cartQuantity == 1 || cartQuantity == props.quantity) {
+                        if (cartQuantity == 1 ) {
                             return;
                         } else {
                             setCartQuantity(cartQuantity - 1);
                         }
 
-                    } }>-</button>
+                    } } disabled={cartQuantity == 1 ? true : false}>-</button>
                     </>
                 }
             
@@ -63,7 +74,7 @@ function GroceryItems(props) {
                 rows.push(
                     <GroceryItem name={grocery.name} price={grocery.price} image={grocery.image}
                         category={grocery.category} key={grocery.name} onClick={onClickGrocery}
-                        btnText="Remove" showCart={true}
+                        btnText="Remove" showCart={true} quantity={grocery.quantity}
                     />);
                 }
             else if (props.showCart !== true) {
