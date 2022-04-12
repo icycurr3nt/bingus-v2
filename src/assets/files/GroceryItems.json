@@ -1,4 +1,4 @@
- [{"name":"Red Delicious Apple", "price":1.32, "category": "Fruit", "quantity":0, "image":"https://img.huffingtonpost.com/asset/5b7ad435200000420034abec.jpeg" }, 
+ [{"name":"Red Delicious Apple", "price":1.32, "category": "Fruit", "quantity":1, "image":"https://img.huffingtonpost.com/asset/5b7ad435200000420034abec.jpeg" }, 
   {"name":"Granny Smith Apple","price":1.12, "category":"Fruit", "quantity":0, "image":"https://www.meijer.com/content/dam/meijer/product/0000/00/0040/17/0000000040174_a1c1_1200.png"},
   {"name":"Dozen Eggs", "price":1.79, "category": "Animal", "quantity":0, "image":"https://www.bazbagel.com/uploads/1/3/1/9/131998451/s174072524441932549_p69_i1_w1000.jpeg"},
   {"name":"Whole Milk", "price":4.02, "category":"Dairy", "quantity":0, "image":"https://www.meijer.com/content/dam/meijer/product/0004/12/5010/20/0004125010200_2_A1C1_1200.png"},
